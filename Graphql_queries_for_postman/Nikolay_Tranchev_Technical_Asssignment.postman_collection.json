@@ -1,0 +1,465 @@
+{
+	"info": {
+		"_postman_id": "ba97e4bb-84b8-4bac-8e57-79d88802fb6f",
+		"name": "Nikolay_Tranchev_Technical_Asssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All species in A New Hope",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query SpeciesInANewHope{\r\n\r\n  film(filmID: 1) {\r\n    title\r\n    speciesConnection{\r\n      species{\r\n        name\r\n      }\r\n    }\r\n  } \r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All species in A New Hope",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query SpeciesInANewHope{\r\n\r\n\tfilm(filmID: 1) {\r\n\t  title\r\n    speciesConnection{\r\n      species{\r\n        name\r\n      }\r\n    }\r\n\t}\r\n  \r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+							"protocol": "https",
+							"host": [
+								"swapi-graphql",
+								"netlify",
+								"app"
+							],
+							"path": [
+								".netlify",
+								"functions",
+								"index"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "160"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 21:53:58 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"a0-zCQas2S06gkr307yE4iKSnhXkUY\""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Age",
+							"value": "1"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Netlify"
+						},
+						{
+							"key": "X-NF-Request-ID",
+							"value": "f9499fff-1bc4-4161-835c-a2d0f9225ca4-99992"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"film\": {\n            \"title\": \"A New Hope\",\n            \"speciesConnection\": {\n                \"species\": [\n                    {\n                        \"name\": \"Human\"\n                    },\n                    {\n                        \"name\": \"Droid\"\n                    },\n                    {\n                        \"name\": \"Wookie\"\n                    },\n                    {\n                        \"name\": \"Rodian\"\n                    },\n                    {\n                        \"name\": \"Hutt\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Person which is Droid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query DroidPerson{\r\n\r\n\tspecies(id:\"c3BlY2llczoy\") {\r\n\t  name\r\n      personConnection{\r\n        people{\r\n          name\r\n          birthYear\r\n          homeworld{\r\n            name\r\n          }\r\n          eyeColor\r\n        }\r\n      }\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Person which is Droid",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query DroidPerson{\r\n\r\n\tspecies(id:\"c3BlY2llczoy\") {\r\n\t  name\r\n    personConnection{\r\n      people{\r\n        name\r\n        birthYear\r\n        homeworld{\r\n          name\r\n        }\r\n        eyeColor\r\n      }\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+							"protocol": "https",
+							"host": [
+								"swapi-graphql",
+								"netlify",
+								"app"
+							],
+							"path": [
+								".netlify",
+								"functions",
+								"index"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "415"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 21:54:13 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"19f-v4HE3QXY9kVg1x9MMDMGEGCiOxI\""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Netlify"
+						},
+						{
+							"key": "X-NF-Request-ID",
+							"value": "f9499fff-1bc4-4161-835c-a2d0f9225ca4-108440"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"species\": {\n            \"name\": \"Droid\",\n            \"personConnection\": {\n                \"people\": [\n                    {\n                        \"name\": \"C-3PO\",\n                        \"birthYear\": \"112BBY\",\n                        \"homeworld\": {\n                            \"name\": \"Tatooine\"\n                        },\n                        \"eyeColor\": \"yellow\"\n                    },\n                    {\n                        \"name\": \"R2-D2\",\n                        \"birthYear\": \"33BBY\",\n                        \"homeworld\": {\n                            \"name\": \"Naboo\"\n                        },\n                        \"eyeColor\": \"red\"\n                    },\n                    {\n                        \"name\": \"R5-D4\",\n                        \"birthYear\": \"unknown\",\n                        \"homeworld\": {\n                            \"name\": \"Tatooine\"\n                        },\n                        \"eyeColor\": \"red\"\n                    },\n                    {\n                        \"name\": \"IG-88\",\n                        \"birthYear\": \"15BBY\",\n                        \"homeworld\": {\n                            \"name\": \"unknown\"\n                        },\n                        \"eyeColor\": \"red\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Count of all people in A New Hope",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query TotalCountOfPeople{\r\n\r\n\tfilm(filmID: 1){\r\n      title\r\n      characterConnection{\r\n        totalCount\r\n        characters{\r\n          id\r\n          name\r\n          gender\r\n        }\r\n      }\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Count of all people in A New Hope",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query TotalCountOfPeople{\r\n\r\n\tfilm(filmID: 1){\r\n    title\r\n    characterConnection{\r\n      totalCount\r\n      characters{\r\n        id\r\n        name\r\n        gender\r\n      }\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+							"protocol": "https",
+							"host": [
+								"swapi-graphql",
+								"netlify",
+								"app"
+							],
+							"path": [
+								".netlify",
+								"functions",
+								"index"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 21:54:25 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"49d-4dD9Uyr15y8/gfSSzOQEy1/eCFQ\""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Content-Length",
+							"value": "363"
+						},
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Netlify"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-NF-Request-ID",
+							"value": "f9499fff-1bc4-4161-835c-a2d0f9225ca4-115452"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"film\": {\n            \"title\": \"A New Hope\",\n            \"characterConnection\": {\n                \"totalCount\": 18,\n                \"characters\": [\n                    {\n                        \"id\": \"cGVvcGxlOjE=\",\n                        \"name\": \"Luke Skywalker\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjI=\",\n                        \"name\": \"C-3PO\",\n                        \"gender\": \"n/a\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjM=\",\n                        \"name\": \"R2-D2\",\n                        \"gender\": \"n/a\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjQ=\",\n                        \"name\": \"Darth Vader\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjU=\",\n                        \"name\": \"Leia Organa\",\n                        \"gender\": \"female\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjY=\",\n                        \"name\": \"Owen Lars\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjc=\",\n                        \"name\": \"Beru Whitesun lars\",\n                        \"gender\": \"female\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjg=\",\n                        \"name\": \"R5-D4\",\n                        \"gender\": \"n/a\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjk=\",\n                        \"name\": \"Biggs Darklighter\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjEw\",\n                        \"name\": \"Obi-Wan Kenobi\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjEy\",\n                        \"name\": \"Wilhuff Tarkin\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjEz\",\n                        \"name\": \"Chewbacca\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjE0\",\n                        \"name\": \"Han Solo\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjE1\",\n                        \"name\": \"Greedo\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjE2\",\n                        \"name\": \"Jabba Desilijic Tiure\",\n                        \"gender\": \"hermaphrodite\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjE4\",\n                        \"name\": \"Wedge Antilles\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjE5\",\n                        \"name\": \"Jek Tono Porkins\",\n                        \"gender\": \"male\"\n                    },\n                    {\n                        \"id\": \"cGVvcGxlOjgx\",\n                        \"name\": \"Raymus Antilles\",\n                        \"gender\": \"male\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Person with unique id = 4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query PersonWithUniqueID4{\r\n\r\n  person(personID: 4) {\r\n    name\r\n    birthYear\r\n    homeworld{\r\n      name\r\n    }\r\n    eyeColor\r\n    starshipConnection{\r\n      starships{\r\n        name\r\n      }\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+					"protocol": "https",
+					"host": [
+						"swapi-graphql",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"index"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Person with unique id = 4",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query PersonWithUniqueID4{\r\n\r\n  person(personID: 4) {\r\n    name\r\n    birthYear\r\n    homeworld{\r\n      name\r\n    }\r\n    eyeColor\r\n    starshipConnection{\r\n      starships{\r\n        name\r\n      }\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://swapi-graphql.netlify.app/.netlify/functions/index",
+							"protocol": "https",
+							"host": [
+								"swapi-graphql",
+								"netlify",
+								"app"
+							],
+							"path": [
+								".netlify",
+								"functions",
+								"index"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Length",
+							"value": "180"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 21:54:33 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"b4-Owlcnii9b5AEl0SxZjmE/Ka68QI\""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "Netlify"
+						},
+						{
+							"key": "X-NF-Request-ID",
+							"value": "f9499fff-1bc4-4161-835c-a2d0f9225ca4-119105"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"person\": {\n            \"name\": \"Darth Vader\",\n            \"birthYear\": \"41.9BBY\",\n            \"homeworld\": {\n                \"name\": \"Tatooine\"\n            },\n            \"eyeColor\": \"yellow\",\n            \"starshipConnection\": {\n                \"starships\": [\n                    {\n                        \"name\": \"TIE Advanced x1\"\n                    }\n                ]\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
