@@ -1,0 +1,1 @@
+# swapi-graphql-tech_task
